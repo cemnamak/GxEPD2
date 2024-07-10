@@ -469,13 +469,13 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
             if (epd2.hasFastPartialUpdate)
             {
               _second_phase = true;
-              fillScreen(GxEPD_WHITE);
+              //fillScreen(GxEPD_WHITE);
               return true;
             }
           }
           return false;
         }
-        fillScreen(GxEPD_WHITE);
+        //fillScreen(GxEPD_WHITE);
         return true;
       }
       else // full update
@@ -492,7 +492,7 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
             {
               epd2.refresh(false); // full update after first phase
               _second_phase = true;
-              fillScreen(GxEPD_WHITE);
+              //fillScreen(GxEPD_WHITE);
               return true;
             }
             //else epd2.refresh(true); // partial update after second phase
@@ -500,7 +500,7 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
           epd2.powerOff();
           return false;
         }
-        fillScreen(GxEPD_WHITE);
+       // fillScreen(GxEPD_WHITE);
         return true;
       }
     }
